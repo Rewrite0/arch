@@ -1,0 +1,42 @@
+#!/bin/env bash
+
+CURRENT_MODE=$(dconf read /org/gnome/desktop/interface/color-scheme)
+
+change_theme () {
+    dconf write /org/gnome/desktop/interface/color-scheme "\"prefer-$1\""
+    notify-send "主题" "已切换为 $1 模式"
+}
+
+toggle_theme () {
+  if [ "$CURRENT_MODE" == "'prefer-dark'" ]; then
+      change_theme light
+  else
+      change_theme dark
+  fi
+  echo "toggle end"
+  echo $(dconf read /org/gnome/desktop/interface/color-scheme)
+}
+
+case "$1" in
+  get)
+    if [ "$CURRENT_MODE" == "'prefer-dark'" ]; then
+      echo "dark"
+    else
+      echo "light"
+    fi
+    ;;
+  toggle)
+    echo "toggle theme"
+    toggle_theme
+    ;;
+  dark)
+    change_theme dark
+    ;;
+  light)
+    change_theme light
+    ;;
+  *)
+    echo "用法: $0 [get|toggle|dark|light]"
+    exit 1
+    ;;
+esac

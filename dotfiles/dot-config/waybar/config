@@ -2,7 +2,7 @@
 	"layer": "top",
 	"modules-left": ["custom/launcher","cpu","memory","custom/media"],
 	"modules-center": ["wlr/taskbar"],
-	"modules-right": ["custom/wallpaper", "backlight", "pulseaudio", "battery", "clock","tray"],
+	"modules-right": ["custom/wallpaper", "custom/dark_mode", "backlight", "pulseaudio", "battery", "clock","tray"],
 	
 	"pulseaudio": {
 		"tooltip": false,
@@ -41,7 +41,7 @@
 	"backlight": {
 		"tooltip": false,
 		"format": " {}%",
-		"interval":1,
+		"interval": 1,
     "on-scroll-up": "light -A 5",
 		"on-scroll-down": "light -U 5"
 	},
@@ -76,29 +76,20 @@
       "format": " {}%",
       "max-length": 10
   },
-  "custom/media": {
-      "interval": 30,
-      "format": "{icon} {}",
-      "return-type": "json",
-      "max-length": 20,
-      "format-icons": {
-          "spotify": " ",
-          "default": " "
-      },
-      "escape": true,
-      "exec": "$HOME/.config/system_scripts/mediaplayer.py 2> /dev/null",
-      "on-click": "playerctl play-pause"
-  },
   "custom/launcher":{
       "format": " ",
       "on-click": "fuzzel",
   },
-  "custom/power":{
-      "format": " ",
-      "on-click": "bash ~/.config/rofi/leave/leave.sh",
-  },
   "custom/wallpaper":{
       "format":" ",
-      "on-click": "bash ~/arch/system_script/pkill_bc"
+      "on-click": "bash $SYSTEM_SCRIPT/pkill_bc"
+  },
+  "custom/dark_mode": {
+      "interval": 1,
+      "tolltip": false,
+      "exec": "~/.config/waybar/modules/darkmode",
+      "return-type": "json",
+      "format": "{}",
+      "on-click": "bash $SYSTEM_SCRIPT/dark_mode toggle"
   }
 }

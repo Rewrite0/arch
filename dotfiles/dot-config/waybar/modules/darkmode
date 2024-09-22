@@ -1,0 +1,9 @@
+#!/bin/env bash
+
+status=$($SYSTEM_SCRIPT/dark_mode get)
+
+if [ "$status" == "dark" ]; then
+    echo '{"text": " ", "alt": "dark", "class": "is-dark" }'
+else
+    echo '{"text": " ", "alt": "light", "class": "is-light" }'
+fi

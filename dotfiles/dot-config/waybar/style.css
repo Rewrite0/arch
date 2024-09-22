@@ -134,12 +134,6 @@ window#waybar.hidden {
   background: #161320;
 }
 
-#custom-power {
-  font-size: 20px;
-  color: #161320;
-  background: #f28fad;
-}
-
 #custom-wallpaper {
   color: #161320;
   background: #c9cbff;
@@ -150,15 +144,19 @@ window#waybar.hidden {
   background: #e8a2af;
 }
 
-#custom-media {
-  color: #161320;
-  background: #f2cdcd;
-}
-
 #taskbar {
   background: rgba(255, 255, 255, 0.5);
 }
 
 #taskbar button:not(.active) {
   opacity: 0.5;
+}
+
+#custom-dark_mode.is-dark {
+  background: #000;
+  color: #fff;
+}
+#custom-dark_mode.is-light {
+  background: #f2cdcd;
+  color: red;
 }

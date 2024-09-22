@@ -4,6 +4,9 @@ environment {
   DISPLAY ":0"
 }
 
+workspace "chat"
+workspace "work"
+
 // 跳过热键帮助
 //hotkey-overlay {
 // skip-at-startup
@@ -160,7 +163,6 @@ animations {
     // slowdown 3.0
 }
 
-workspace "chat"
 
 window-rule {
     match app-id="org.telegram.desktop"
@@ -178,7 +180,9 @@ window-rule {
 window-rule {
     match app-id="Code"
     match app-id=r#"zed"#
+
     default-column-width { proportion 0.75; }
+    open-on-workspace "work"
 }
 
 binds {

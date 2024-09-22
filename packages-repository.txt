@@ -7,6 +7,7 @@ blueman
 bluez-utils
 btop
 cage
+cronie
 dex
 docker
 docker-compose
@@ -30,6 +31,7 @@ gst-plugin-pipewire
 htop
 imv
 iwd
+jq
 kitty
 konsole
 lazygit
