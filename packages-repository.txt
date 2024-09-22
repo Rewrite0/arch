@@ -5,12 +5,14 @@ base
 base-devel
 blueman
 bluez-utils
+btop
 cage
 dex
 docker
 docker-compose
 dolphin
 efibootmgr
+fastfetch
 fcitx5
 fcitx5-chinese-addons
 fcitx5-configtool
