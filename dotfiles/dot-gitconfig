@@ -1,0 +1,7 @@
+[user]
+	name = Rewrite0
+	email = Rewrite0.me@gmail.com
+[http]
+	postBuffer = 524288000
+[init]
+	defaultBranch = main

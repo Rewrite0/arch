@@ -1,0 +1,8 @@
+google-chrome
+paru-git
+paru-git-debug
+payload-dumper-go-bin
+ttf-ms-win11-auto-zh_cn
+visual-studio-code-bin
+xwayland-satellite
+zed-cn-bin

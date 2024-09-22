@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# 设置音量增减幅度
+step=5
+
+# 判断参数并调整音量
+case "$1" in
+  up)
+    # 如果当前静音，则取消静音
+    pactl set-sink-mute @DEFAULT_SINK@ 0
+    pactl set-sink-volume @DEFAULT_SINK@ +"$step%"
+    ;;
+  down)
+    pactl set-sink-volume @DEFAULT_SINK@ -"$step%"
+    ;;
+  toggle)
+    pactl set-sink-mute @DEFAULT_SINK@ toggle 
+    ;;
+  *)
+    echo "用法: $0 [up|down|toggle]"
+    exit 1
+    ;;
+esac
+
+# 获取调整后的音量和静音状态
+new_volume=$(pactl get-sink-volume @DEFAULT_SINK@ | head -n 1 | awk '{print $5}' | tr -d '%')
+new_muted=$(pactl get-sink-mute @DEFAULT_SINK@ | awk '{print  $2}')
+
+echo "音量: $new_volume $new_muted"
+
+# 显示通知
+if [[ "$new_muted" == "yes" ]]; then
+  notify-send "音量" "静音" -i volume-muted 
+else
+  notify-send "音量" "$new_volume%" -i volume-$((new_volume / 10 * 10))
+fi

@@ -1,0 +1,8 @@
+[Unit]
+PartOf=graphical-session.target
+After=graphical-session.target
+Requisite=graphical-session.target
+
+[Service]
+ExecStart=/bin/bash -c "${SYSTEM_SCRIPT}/wm_idle"
+Restart=on-failure
