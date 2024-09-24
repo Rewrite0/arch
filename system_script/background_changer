@@ -4,5 +4,5 @@ wallpapers_path=~/Pictures/wallpaper
 
 while true; do
   swaybg -i $(find $wallpapers_path -type f | shuf -n 1) -m fill
-  sleep 5m
+  sleep 2m
 done

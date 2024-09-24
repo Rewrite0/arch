@@ -4,7 +4,7 @@ environment {
   DISPLAY ":0"
 }
 
-workspace "chat"
+workspace "main"
 workspace "work"
 
 // 跳过热键帮助
@@ -163,14 +163,6 @@ animations {
     // slowdown 3.0
 }
 
-
-window-rule {
-    match app-id="org.telegram.desktop"
-    match app-id="QQ"
-    match app-id="wechat"
-
-    open-on-workspace "chat"
-}
 
 window-rule {
     match app-id=r#"chrome"#
