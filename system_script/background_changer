@@ -3,6 +3,13 @@
 wallpapers_path=~/Pictures/wallpaper
 
 while true; do
-  swaybg -i $(find $wallpapers_path -type f | shuf -n 1) -m fill
-  sleep 2m
+  image=$(find $wallpapers_path -type f | shuf -n 1)
+
+  niri msg action do-screen-transition --delay-ms 100
+  killall swaybg
+
+  swaybg -i $image -m fill &
+  echo "wallpaper: $image"
+
+  sleep 5m
 done
