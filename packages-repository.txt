@@ -13,6 +13,7 @@ docker
 docker-compose
 dolphin
 efibootmgr
+ethtool
 fastfetch
 fcitx5
 fcitx5-chinese-addons

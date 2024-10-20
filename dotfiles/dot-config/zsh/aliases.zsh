@@ -8,7 +8,7 @@ alias -s 7z='7z x'
 
 #alias
 alias ..='cd ..'
-alias ...='cd ...'
+alias ...='cd ../..'
 alias la='ls -a'
 alias ll='ls -al'
 alias yz=yazi

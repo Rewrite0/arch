@@ -1,0 +1,11 @@
+#!/bin/env bash
+
+hour=$(date +%H)
+
+if (( hour >= 20 || hour < 8 )); then
+  echo "当前时间在 20 点后或 8 点前"
+  ~/arch/system_script/dark_mode dark
+else
+  echo "当前时间在 8 点到 20 点之间"
+  ~/arch/system_script/dark_mode light
+fi
