@@ -38,12 +38,12 @@ konsole
 lazygit
 libgit2
 libpulse
-libva-mesa-driver
 lightdm
 lightdm-gtk-greeter
 lightdm-gtk-greeter-settings
 linux-firmware
 linux-zen
+linux-zen-headers
 mako
 nano
 nautilus
@@ -62,7 +62,7 @@ pipewire-pulse
 plasma-meta
 pnpm
 python-pynvim
-rmlint
+qemu-guest-agent
 smartmontools
 steam
 stow

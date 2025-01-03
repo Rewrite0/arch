@@ -1,4 +1,4 @@
-spawn-at-startup "xwayland-satellite"
+// spawn-at-startup "xwayland-satellite"
 spawn-at-startup "~/arch/system_script/init_dark_mode"
 
 environment {
@@ -9,9 +9,9 @@ workspace "main"
 workspace "work"
 
 // 跳过热键帮助
-//hotkey-overlay {
-// skip-at-startup
-//}
+hotkey-overlay {
+ skip-at-startup
+}
 
 // 忽略客户端装饰
 prefer-no-csd
