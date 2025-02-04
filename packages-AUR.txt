@@ -1,10 +1,8 @@
+adspower-global
 google-chrome
 linuxqq
 paru-git
 paru-git-debug
 payload-dumper-go-bin
-rmlint
-ttf-ms-win11-auto-zh_cn
 visual-studio-code-bin
 wechat-bin
-xwayland-satellite
