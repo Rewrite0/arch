@@ -5,9 +5,6 @@ environment {
   DISPLAY ":0"
 }
 
-workspace "main"
-workspace "work"
-
 // 跳过热键帮助
 hotkey-overlay {
  skip-at-startup
@@ -104,6 +101,10 @@ input {
     position x=1280 y=0
 }
 
+output "HDMI-A-1" {
+  off
+}
+
 layout {
     // 窗口间隙
     gaps 10
@@ -175,7 +176,17 @@ window-rule {
     match app-id=r#"zed"#
 
     default-column-width { proportion 0.75; }
-    open-on-workspace "work"
+}
+
+window-rule {
+    match app-id="org.telegram.desktop" title="媒体查看器"
+    open-floating true
+}
+
+// bitwarden
+window-rule {
+    match app-id="chrome-nngceckbapebfimnlniiiahkandclblb-Default"
+    open-floating true
 }
 
 binds {
