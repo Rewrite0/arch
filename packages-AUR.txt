@@ -5,4 +5,5 @@ paru-git
 paru-git-debug
 payload-dumper-go-bin
 visual-studio-code-bin
-wechat-bin
+wechat
+xwayland-satellite-git
