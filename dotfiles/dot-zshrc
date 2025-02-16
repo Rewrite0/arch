@@ -43,13 +43,4 @@ zstyle :prompt:pure:git:stash show yes
 zstyle :prompt:pure:git:fetch only_upstream yes
 
 source ~/.config/zsh/aliases.zsh
-
-# pnpm
-export PNPM_HOME="/home/re/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
-export PATH=$PATH:$USER_PATH
+source ~/.config/environment.d/var.conf

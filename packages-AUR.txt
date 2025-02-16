@@ -1,4 +1,5 @@
 adspower-global
+android-studio
 google-chrome
 linuxqq
 paru-git
